@@ -1,0 +1,24 @@
+/* Generate LESS Classes
+--------------------------------------------------------------------------------------------------------- */
+
+// global
+@prefix: ;
+@import "object_oriented.less";
+
+// only mobile
+@media (min-width: 0) and (max-width: 650px) {
+    @prefix: mobile-;
+    @import (multiple) "object_oriented.less";
+}
+
+// only tablet
+@media (min-width: 650px) and (max-width: 990px) {
+    @prefix: tablet-;
+    @import (multiple) "object_oriented.less";
+}
+
+// only desktop
+@media (min-width: 990px) {
+    @prefix: dektop-;
+    @import (multiple) "object_oriented.less";
+}

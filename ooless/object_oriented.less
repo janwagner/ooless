@@ -1,0 +1,268 @@
+/* Basics
+--------------------------------------------------------------------------------------------------------- */
+
+.@{prefix}pa     { position: absolute                            }
+.@{prefix}pr     { position: relative                            }
+
+.@{prefix}left   { float:left                                    }
+.@{prefix}right  { float:right                                   }
+
+.@{prefix}tac    { text-align: center                            }
+.@{prefix}tal    { text-align: left                              }
+.@{prefix}tar    { text-align: right                             }
+
+.@{prefix}dpb    { display: block                                }
+.@{prefix}dpib   { display: inline-block; float: none            }
+.@{prefix}dpi    { display: inline                               }
+.@{prefix}dpn    { display: none                                 }
+
+/* Font
+--------------------------------------------------------------------------------------------------------- */
+
+@fs: 16px;
+@lh: 18px;
+
+.@{prefix}fs50  { font-size: (@fs * 0.5); line-height: (@lh * 0.5) }
+.@{prefix}fs60  { font-size: (@fs * 0.6); line-height: (@lh * 0.6) }
+.@{prefix}fs70  { font-size: (@fs * 0.7); line-height: (@lh * 0.7) }
+.@{prefix}fs80  { font-size: (@fs * 0.8); line-height: (@lh * 0.8) }
+.@{prefix}fs90  { font-size: (@fs * 0.9); line-height: (@lh * 0.9) }
+.@{prefix}fs100 { font-size: (@fs * 1.0); line-height: (@lh * 1.0) }
+.@{prefix}fs110 { font-size: (@fs * 1.1); line-height: (@lh * 1.1) }
+.@{prefix}fs120 { font-size: (@fs * 1.2); line-height: (@lh * 1.2) }
+.@{prefix}fs130 { font-size: (@fs * 1.3); line-height: (@lh * 1.3) }
+.@{prefix}fs140 { font-size: (@fs * 1.4); line-height: (@lh * 1.4) }
+.@{prefix}fs150 { font-size: (@fs * 1.5); line-height: (@lh * 1.5) }
+.@{prefix}fs160 { font-size: (@fs * 1.6); line-height: (@lh * 1.6) }
+.@{prefix}fs170 { font-size: (@fs * 1.7); line-height: (@lh * 1.7) }
+.@{prefix}fs180 { font-size: (@fs * 1.8); line-height: (@lh * 1.8) }
+.@{prefix}fs190 { font-size: (@fs * 1.9); line-height: (@lh * 1.9) }
+.@{prefix}fs200 { font-size: (@fs * 2.0); line-height: (@lh * 2.0) }
+
+/* Positioning
+--------------------------------------------------------------------------------------------------------- */
+
+.@{prefix}t0 {       top: 0;                }
+.@{prefix}t5 {       top: 5px;              }
+.@{prefix}t10 {      top: 10px;             }
+.@{prefix}t15 {      top: 15px;             }
+.@{prefix}t20 {      top: 20px;             }
+
+.@{prefix}r0 {       right: 0;              }
+.@{prefix}r5 {       right: 5px;            }
+.@{prefix}r10 {      right: 10px;           }
+.@{prefix}r15 {      right: 15px;           }
+.@{prefix}r20 {      right: 20px;           }
+
+.@{prefix}b0 {       bottom: 0;             }
+.@{prefix}b5 {       bottom: 5px;           }
+.@{prefix}b10 {      bottom: 10px;          }
+.@{prefix}b15 {      bottom: 15px;          }
+.@{prefix}b20 {      bottom: 20px;          }
+
+.@{prefix}l0 {       left: 0;               }
+.@{prefix}l5 {       left: 5px;             }
+.@{prefix}l10 {      left: 10px;            }
+.@{prefix}l15 {      left: 15px;            }
+.@{prefix}l20 {      left: 20px;            }
+
+/* Spacing
+--------------------------------------------------------------------------------------------------------- */
+
+.@{prefix}m0 {       margin: 0px            }
+.@{prefix}m5 {       margin: 5px            }
+.@{prefix}m10 {      margin: 10px           }
+.@{prefix}m15 {      margin: 15px           }
+.@{prefix}m20 {      margin: 20px           }
+.@{prefix}m25 {      margin: 25px           }
+.@{prefix}m30 {      margin: 30px           }
+.@{prefix}m40 {      margin: 40px           }
+.@{prefix}m50 {      margin: 50px           }
+
+.@{prefix}mt0 {      margin-top: 0px        }
+.@{prefix}mt5 {      margin-top: 5px        }
+.@{prefix}mt10 {     margin-top: 10px       }
+.@{prefix}mt15 {     margin-top: 15px       }
+.@{prefix}mt20 {     margin-top: 20px       }
+.@{prefix}mt25 {     margin-top: 25px       }
+.@{prefix}mt30 {     margin-top: 30px       }
+.@{prefix}mt40 {     margin-top: 40px       }
+.@{prefix}mt50 {     margin-top: 50px       }
+
+.@{prefix}mr0 {      margin-right: 0px      }
+.@{prefix}mr5 {      margin-right: 5px      }
+.@{prefix}mr10 {     margin-right: 10px     }
+.@{prefix}mr15 {     margin-right: 15px     }
+.@{prefix}mr20 {     margin-right: 20px     }
+.@{prefix}mr25 {     margin-right: 25px     }
+.@{prefix}mr30 {     margin-right: 30px     }
+.@{prefix}mr40 {     margin-right: 40px     }
+.@{prefix}mr50 {     margin-right: 50px     }
+
+.@{prefix}mb0 {      margin-bottom: 0px     }
+.@{prefix}mb5 {      margin-bottom: 5px     }
+.@{prefix}mb10 {     margin-bottom: 10px    }
+.@{prefix}mb15 {     margin-bottom: 15px    }
+.@{prefix}mb20 {     margin-bottom: 20px    }
+.@{prefix}mb25 {     margin-bottom: 25px    }
+.@{prefix}mb30 {     margin-bottom: 30px    }
+.@{prefix}mb40 {     margin-bottom: 40px    }
+.@{prefix}mb50 {     margin-bottom: 50px    }
+
+.@{prefix}ml0 {      margin-left: 0px       }
+.@{prefix}ml5 {      margin-left: 5px       }
+.@{prefix}ml10 {     margin-left: 10px      }
+.@{prefix}ml15 {     margin-left: 15px      }
+.@{prefix}ml20 {     margin-left: 20px      }
+.@{prefix}ml25 {     margin-left: 25px      }
+.@{prefix}ml30 {     margin-left: 30px      }
+.@{prefix}ml40 {     margin-left: 40px      }
+.@{prefix}ml50 {     margin-left: 50px      }
+
+.@{prefix}p0 {       padding: 0px           }
+.@{prefix}p5 {       padding: 5px           }
+.@{prefix}p10 {      padding: 10px          }
+.@{prefix}p15 {      padding: 15px          }
+.@{prefix}p20 {      padding: 20px          }
+.@{prefix}p25 {      padding: 25px          }
+.@{prefix}p30 {      padding: 30px          }
+.@{prefix}p40 {      padding: 40px          }
+.@{prefix}p50 {      padding: 50px          }
+
+.@{prefix}pt5 {      padding-top: 5px       }
+.@{prefix}pt0 {      padding-top: 0px       }
+.@{prefix}pt10 {     padding-top: 10px      }
+.@{prefix}pt15 {     padding-top: 15px      }
+.@{prefix}pt20 {     padding-top: 20px      }
+.@{prefix}pt25 {     padding-top: 25px      }
+.@{prefix}pt30 {     padding-top: 30px      }
+.@{prefix}pt40 {     padding-top: 40px      }
+.@{prefix}pt50 {     padding-top: 50px      }
+.@{prefix}pt60 {     padding-top: 60px      }
+.@{prefix}pt70 {     padding-top: 70px      }
+.@{prefix}pt80 {     padding-top: 80px      }
+.@{prefix}pt90 {     padding-top: 90px      }
+.@{prefix}pt100 {    padding-top: 100px     }
+
+.@{prefix}pr0 {      padding-right: 0px     }
+.@{prefix}pr5 {      padding-right: 5px     }
+.@{prefix}pr10 {     padding-right: 10px    }
+.@{prefix}pr15 {     padding-right: 15px    }
+.@{prefix}pr20 {     padding-right: 20px    }
+.@{prefix}pr25 {     padding-right: 25px    }
+.@{prefix}pr30 {     padding-right: 30px    }
+.@{prefix}pr40 {     padding-right: 40px    }
+.@{prefix}pr50 {     padding-right: 50px    }
+
+.@{prefix}pb0 {      padding-bottom: 0px    }
+.@{prefix}pb5 {      padding-bottom: 5px    }
+.@{prefix}pb10 {     padding-bottom: 10px   }
+.@{prefix}pb15 {     padding-bottom: 15px   }
+.@{prefix}pb20 {     padding-bottom: 20px   }
+.@{prefix}pb25 {     padding-bottom: 25px   }
+.@{prefix}pb30 {     padding-bottom: 30px   }
+.@{prefix}pb40 {     padding-bottom: 40px   }
+.@{prefix}pb50 {     padding-bottom: 50px   }
+.@{prefix}pb60 {     padding-bottom: 60px   }
+.@{prefix}pb70 {     padding-bottom: 70px   }
+.@{prefix}pb80 {     padding-bottom: 80px   }
+.@{prefix}pb90 {     padding-bottom: 90px   }
+.@{prefix}pb100 {    padding-bottom: 100px  }
+
+.@{prefix}pl0 {      padding-left: 0px      }
+.@{prefix}pl5 {      padding-left: 5px      }
+.@{prefix}pl10 {     padding-left: 10px     }
+.@{prefix}pl15 {     padding-left: 15px     }
+.@{prefix}pl20 {     padding-left: 20px     }
+.@{prefix}pl25 {     padding-left: 25px     }
+.@{prefix}pl30 {     padding-left: 30px     }
+.@{prefix}pl40 {     padding-left: 40px     }
+.@{prefix}pl50 {     padding-left: 50px     }
+
+/* Sizes
+--------------------------------------------------------------------------------------------------------- */
+
+.@{prefix}w10 {      width: 10%             }
+.@{prefix}w20 {      width: 20%             }
+.@{prefix}w25 {      width: 25%             }
+.@{prefix}w30 {      width: 30%             }
+.@{prefix}w33 {      width: 33.33%          }
+.@{prefix}w40 {      width: 40%             }
+.@{prefix}w50 {      width: 50%             }
+.@{prefix}w60 {      width: 60%             }
+.@{prefix}w70 {      width: 70%             }
+.@{prefix}w80 {      width: 80%             }
+.@{prefix}w90 {      width: 90%             }
+.@{prefix}w100 {     width: 100%            }
+.@{prefix}wauto {    width: auto            }
+
+.@{prefix}mw10  {    max-width: 10%         }
+.@{prefix}mw20  {    max-width: 20%         }
+.@{prefix}mw30  {    max-width: 30%         }
+.@{prefix}mw40  {    max-width: 40%         }
+.@{prefix}mw50  {    max-width: 50%         }
+.@{prefix}mw60  {    max-width: 60%         }
+.@{prefix}mw70  {    max-width: 70%         }
+.@{prefix}mw80  {    max-width: 80%         }
+.@{prefix}mw90  {    max-width: 90%         }
+.@{prefix}mw100 {    max-width: 100%        }
+
+.@{prefix}mw100px {  max-width: 100px       }
+.@{prefix}mw110px {  max-width: 110px       }
+.@{prefix}mw120px {  max-width: 120px       }
+.@{prefix}mw130px {  max-width: 130px       }
+.@{prefix}mw140px {  max-width: 140px       }
+.@{prefix}mw150px {  max-width: 150px       }
+
+.@{prefix}h10 {      height: 10%            }
+.@{prefix}h20 {      height: 20%            }
+.@{prefix}h25 {      height: 25%            }
+.@{prefix}h30 {      height: 30%            }
+.@{prefix}h40 {      height: 40%            }
+.@{prefix}h50 {      height: 50%            }
+.@{prefix}h60 {      height: 60%            }
+.@{prefix}h70 {      height: 70%            }
+.@{prefix}h80 {      height: 80%            }
+.@{prefix}h90 {      height: 90%            }
+.@{prefix}h100 {     height: 100%           }
+
+.@{prefix}vh10 {     min-height: 10vh       }
+.@{prefix}vh20 {     min-height: 20vh       }
+.@{prefix}vh25 {     min-height: 25vh       }
+.@{prefix}vh30 {     min-height: 30vh       }
+.@{prefix}vh40 {     min-height: 40vh       }
+.@{prefix}vh48 {     min-height: 48vh       }
+.@{prefix}vh49 {     min-height: 49vh       }
+.@{prefix}vh50 {     min-height: 50vh       }
+.@{prefix}vh60 {     min-height: 60vh       }
+.@{prefix}vh70 {     min-height: 70vh       }
+.@{prefix}vh80 {     min-height: 80vh       }
+.@{prefix}vh90 {     min-height: 90vh       }
+.@{prefix}vh100 {    min-height: 100vh      }
+
+.@{prefix}w10px {     width: 10px           }
+.@{prefix}w20px {     width: 20px           }
+.@{prefix}w30px {     width: 30px           }
+.@{prefix}w40px {     width: 40px           }
+.@{prefix}w50px {     width: 50px           }
+.@{prefix}w60px {     width: 60px           }
+.@{prefix}w70px {     width: 70px           }
+.@{prefix}w80px {     width: 80px           }
+.@{prefix}w90px {     width: 90px           }
+.@{prefix}w100px {    width: 100px          }
+.@{prefix}w110px {    width: 110px          }
+.@{prefix}w120px {    width: 120px          }
+.@{prefix}w130px {    width: 130px          }
+.@{prefix}w140px {    width: 140px          }
+.@{prefix}w150px {    width: 150px          }
+.@{prefix}w160px {    width: 160px          }
+.@{prefix}w170px {    width: 170px          }
+.@{prefix}w180px {    width: 180px          }
+.@{prefix}w190px {    width: 190px          }
+.@{prefix}w200px {    width: 200px          }
+.@{prefix}w250px {    width: 250px          }
+.@{prefix}w300px {    width: 300px          }
+.@{prefix}w350px {    width: 350px          }
+.@{prefix}w400px {    width: 400px          }
+.@{prefix}w450px {    width: 450px          }
+.@{prefix}w500px {    width: 500px          }
