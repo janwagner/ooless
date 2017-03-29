@@ -1,10 +1,10 @@
 # OO LESS
 Create your own Object Oriented LESS Grid System
-    - Media Querie Support
-    - Based on css calc
-    - Possible use of % or PX values
-    - 12, 16, 24, .... columns
-    - Nested rows!
+- Media Querie Support
+- Based on css calc
+- Possible use of % or PX values
+- 12, 16, 24, .... columns
+- Nested rows!
 
 ### Version
 1.0.0
