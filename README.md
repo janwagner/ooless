@@ -17,7 +17,7 @@ Create your own Object Oriented LESS Grid System
 ```sh
   <div class="row">
     <div class="col-4 tablet-col-6 mobile-col-12">
-      <h2 class="mb50 tablet-mb-20 mobile-mb-10"></h2>
+      <h2 class="mb50 tablet-mb20 mobile-mb10"></h2>
       <img src="..." class="tablet-w80 mobile-w60" />
     </div>
     <div class="col-4 tablet-col-6 mobile-col-12"></div>
