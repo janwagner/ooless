@@ -1,5 +1,10 @@
 # OO LESS
-Create your own Object Oriented LESS Classes with Media Querie Support
+Create your own Object Oriented LESS Grid System
+    - Media Querie Support
+    - Based on css calc
+    - Possible use of % or PX values
+    - 12, 16, 24, .... columns
+    - Nested rows!
 
 ### Version
 1.0.0
@@ -8,17 +13,107 @@ Create your own Object Oriented LESS Classes with Media Querie Support
 
 * [LESS]
 
-## Example
-#### 1. Define your desired classes
+## OO GRID
+#### 1. Variables
 ```sh
-    .@{prefix}tac    { text-align: center       }
-    .@{prefix}tal    { text-align: left         }
-    .@{prefix}tar    { text-align: right        }
+    @gridWidth: 1280px;
+    @columnCount: 12;
+    @columnSpace: 20px;
+    @columnWidth: 100 - @columnSpace;
+```
+#### 2. Define Rows and Columns
+```sh
+    .column(@count) {
+        @thisColumnWidth: 100% / @columnCount * @count;
+        @thisColumnSpace: @columnSpace / 2;
+        box-sizing: border-box;
+        float: left;
+        margin-left: @thisColumnSpace;
+        margin-right: @thisColumnSpace;
+        min-height: 1px; // for empty cols
+        width: calc(~"@{thisColumnWidth} - @{thisColumnSpace} * 2");
+    }
 
-    .@{prefix}m0     { margin: 0px              }
-    .@{prefix}m5     { margin: 5px              }
-    .@{prefix}m10    { margin: 10px             }
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: @gridWidth;
+        position: relative;
+        &:after { // clearfix
+            clear: both;
+            content: "";
+            display: table;
+        }
+        .row {
+            margin-left: -(@columnSpace / 2);
+            margin-right: -(@columnSpace / 2);
+            max-width: none;
+        }
+    }
+```
+#### 3. Create Media Querie Supported Classes
+```sh
+    // only mobile
+    .cols(@columnCount);
+    .cols(@n, @i: 1) when (@i =< @n) { .col-@{i} { .column(@i) } .cols(@n, (@i + 1)) }
 
+    // only mobile
+    @media (min-width: 0) and (max-width: 650px) {
+        .mobile-cols(@columnCount);
+        .mobile-cols(@n, @i: 1) when (@i =< @n) { .mobile-col-@{i} { .column(@i) } .mobile-cols(@n, (@i + 1)) }
+    }
+
+    ...
+
+
+```
+#### 4. Voilà
+```sh
+    .col-1 {
+      box-sizing: border-box;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      min-height: 1px;
+      width: calc(8.333333333333334% - 10px * 2);
+    }
+    .col-2 {
+      box-sizing: border-box;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      min-height: 1px;
+      width: calc(16.666666666666668% - 10px * 2);
+    }
+
+    ...
+
+    @media (min-width: 0) and (max-width: 650px) {
+      .mobile-col-1 {
+        box-sizing: border-box;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 1px;
+        width: calc(8.333333333333334% - 10px * 2);
+      }
+      .mobile-col-2 {
+        box-sizing: border-box;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 1px;
+        width: calc(16.666666666666668% - 10px * 2);
+      }
+
+      ...
+    }
+```
+
+## OO Classes Example
+#### 1. Define your desired classes
+
+```sh
     .@{prefix}w10    { width: 10%               }
     .@{prefix}w20    { width: 20%               }
     .@{prefix}w25    { width: 25%               }
@@ -37,17 +132,7 @@ Create your own Object Oriented LESS Classes with Media Querie Support
         @import (multiple) "object_oriented.less";
     }
 
-    // only tablet
-    @media (min-width: 650px) and (max-width: 990px) {
-        @prefix: tablet-;
-        @import (multiple) "object_oriented.less";
-    }
-
-    // only desktop
-    @media (min-width: 990px) {
-        @prefix: desktop-;
-        @import (multiple) "object_oriented.less";
-    }
+    ...
 ```
 #### 3. Voilà
 ```sh
@@ -73,5 +158,7 @@ Create your own Object Oriented LESS Classes with Media Querie Support
       .mobile-w25 {
         width: 25%;
       }
+
+      ...
     }
 ```

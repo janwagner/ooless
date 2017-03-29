@@ -1,4 +1,4 @@
-/* Generate LESS Classes
+/* Object Oriented LESS Classes
 --------------------------------------------------------------------------------------------------------- */
 
 // global
@@ -21,4 +21,62 @@
 @media (min-width: 990px) {
     @prefix: desktop-;
     @import (multiple) "object_oriented.less";
+}
+
+/* 960 Grid LESS
+--------------------------------------------------------------------------------------------------------- */
+
+@gridWidth: 1280px;
+@columnCount: 12;
+@columnSpace: 20px;
+@columnWidth: 100 - @columnSpace;
+
+.column(@count) {
+    @thisColumnWidth: 100% / @columnCount * @count;
+    @thisColumnSpace: @columnSpace / 2;
+    box-sizing: border-box;
+    float: left;
+    margin-left: @thisColumnSpace;
+    margin-right: @thisColumnSpace;
+    min-height: 1px; // for empty cols
+    width: calc(~"@{thisColumnWidth} - @{thisColumnSpace} * 2");
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: @gridWidth;
+    position: relative;
+    &:after { // clearfix
+        clear: both;
+        content: "";
+        display: table;
+    }
+    .row {
+        margin-left: -(@columnSpace / 2);
+        margin-right: -(@columnSpace / 2);
+        max-width: none;
+    }
+}
+
+// global
+.cols(@columnCount);
+.cols(@n, @i: 1) when (@i =< @n) { .col-@{i} { .column(@i) } .cols(@n, (@i + 1)) }
+
+// only mobile
+@media (min-width: 0) and (max-width: 650px) {
+    .mobile-cols(@columnCount);
+    .mobile-cols(@n, @i: 1) when (@i =< @n) { .mobile-col-@{i} { .column(@i) } .mobile-cols(@n, (@i + 1)) }
+}
+
+// only tablet
+@media (min-width: 650px) and (max-width: 990px) {
+    .tablet-cols(@columnCount);
+    .tablet-cols(@n, @i: 1) when (@i =< @n) { .tablet-col-@{i} { .column(@i) } .tablet-cols(@n, (@i + 1)) }
+}
+
+// only desktop
+@media (min-width: 990px) {
+    .desktop-cols(@columnCount);
+    .desktop-cols(@n, @i: 1) when (@i =< @n) { .desktop-col-@{i} { .column(@i) } .desktop-cols(@n, (@i + 1)) }
 }
